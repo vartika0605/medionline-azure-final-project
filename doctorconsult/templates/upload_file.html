@@ -1,0 +1,32 @@
+
+{% extends "base.html"%}
+{% load crispy_forms_tags %}
+
+
+    {% block content %}
+    <div class="global-container">
+        <div class="card dc-form">
+        <div class="card-body">
+            <h3 class="card-title text-center">Register Now to give Consult Patients Online And Increase your Business</h3>
+            {% if messages %}
+
+            {% for message in messages %}
+            <div class="alert alert-info">
+                {{ message }}
+            </div>
+            {% endfor %}
+      
+        {% endif %}
+        <div class="card-text">
+
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %} 
+    {{ form|crispy }}
+    <input class="btn btn-success" type="submit" value="submit"><br>
+   
+</form>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

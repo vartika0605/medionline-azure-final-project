@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static }
+{% block title %}My Profile{% endblock %}
+
+{% block content%}
+    <div class="  my-4 mx-5 p-5 text-capitalize" style=" background:white;">
+        
+            <h5>Welcome {{user_data.username}}!</h5>
+        
+    
+
+    <div class="container  my-2"></div>
+        <div class="card">
+            <li>
+                <a>{{ user_data.name }}</a> ({{user_data.speciality}})
+              </li>
+              <a href="{% url 'doctordelete' user_data.username %}" class="btn btn-outline-danger" style="float:right;">Delete</a>
+    </div>
+    </div>
+{% endblock %}

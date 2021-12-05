@@ -1,0 +1,10 @@
+<html>
+    <head>
+        <title>All appointment</title>
+    </head>
+    <body>
+        {% for a in appointment %}
+            {{ a.patient_name }} {{ a.patient_age }} {{ a.doctor.username }} {{ a.date }} {{ a.timeslot }} <br>
+        {% endfor %}
+    </body>
+</html>

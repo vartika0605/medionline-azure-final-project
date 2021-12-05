@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static }
+{% block title %}My Profile{% endblock %}
+
+{% block content%}
+    <div class="  my-4 mx-5 p-5 text-capitalize" style=" background:white;">
+        
+       
+        <h5> {{user_data.username}}</h5>
+        
+    
+
+        <div class="container  my-2"></div>
+            <div class="card">
+                {{user_data.presciption}}
+           
+                {% for i in user_data.prescription.all%}
+               
+                    <div class="card-body">
+                        <h6>{{i.doctor}}</h6>
+                        <p>{{i.description}}</p>
+                        <a href="{{i.file_field.url}}" target="_blank" class="btn btn-outline-warning">View</a>
+                        <a href="{{i.file_field.url}}" download class="btn btn-outline-info">Download</a>
+                       
+                            
+                        
+                    </div>
+                
+    
+                {% endfor %}
+          
+        </div>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+<nav class="navbar">
+  <div class="main-menu">
+    <ul>
+      <li><a href="{% url 'index' %}">Questions</a></li>
+    </ul>
+  </div>
+  <div class="user-menu">
+    <ul>
+      {% if user.is_authenticated %}
+      <li><a href="{% url 'new-question' %}">Ask question related to your health</a></li>
+     
+     
+      {% endif %}
+    </ul>
+  </div>
+</nav>

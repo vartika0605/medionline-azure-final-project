@@ -1,0 +1,1 @@
+web: gunicorn MediOnline.wsgi --log-file -

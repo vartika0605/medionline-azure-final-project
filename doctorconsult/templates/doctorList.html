@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1 class="text-center">Doctors</h1>
+  <div class="expert_doctors_area doctor_page">
+    <div class="container">
+      {% if object_list %}
+        <div class="row" >
+           
+          {% for object in object_list %}
+            <div class="col-md-6 col-lg-3">
+              <a href="{% url 'doctor_detail' object.username %}">
+                <div class="single_expert mb-40">
+                   
+                    <div class="expert_thumb">
+                        <img src="https://medi-online.herokuapp.com/media/{{object.profile_pic}}" alt="">
+                    </div>
+                    <div class="experts_name text-center">
+                     <h3>{{ object.name }}</h3>
+                        <span> {{object.speciality}}</span>
+                    </div>
+                </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+      <p>No doctor available</p>
+    {% endif %} 
+  </div>
+  </div>
+{% endblock %}
+

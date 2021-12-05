@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+  <h1 class="text-center">Doctor {{ doctor.name }}  </h1>
+  <h3 class="text-center">{{doctor.address_of_your_workplace}}</h3>
+  <div class="container">
+    <div class="border_bottom">
+            <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        
+                            <div class="row align-items-center">
+                                    <div class="col-xl-6 col-md-6">
+                                        <div class="business_info">
+                                            <div class="icon">
+                                                <i class="flaticon-first-aid-kit"></i>
+                                            </div>
+                                            <h4>Speciality : {{doctor.speciality}}</h4>
+                                            <h4>Experience : {{doctor.experience}} years of experience</h4>
+                                            <h4>Charges: {{doctor.doc_price}}</h4>
+                                            <a  class="btn btn-primary"  href="{% url 'appointment' doctor.username %}">Meke appointment </a> 
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-md-6">
+                                        <div class="business_thumb">
+                                            <img style="max-width:70%;" src="https://medi-online.herokuapp.com/media/{{doctor.profile_pic}}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                    
+                  </div>
+    </div>
+
+</div>
+{% endblock %}
+
