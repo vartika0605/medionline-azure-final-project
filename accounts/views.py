@@ -130,7 +130,7 @@ def error_page(request):
 
 def send_mail_after_registration(email , token):
     subject = 'Your accounts need to be verified'
-    message = f'Hi paste the link to verify your account https://medi-online.herokuapp.com/verify/{token}'
+    message = f'Hi paste the link to verify your account https://medionline.azurewebsites.net/verify/{token}'
     email_from = settings.EMAIL_HOST_USER
     recipient_list = [email]
     
@@ -195,7 +195,7 @@ def ForgetPassword(request):
             profile_obj.forget_password_token = token
             profile_obj.save()
             subject = 'Your forget password link'
-            message = f'Hi , click on the link to reset your password https://medi-online.herokuapp.com/change-password/{token}/'
+            message = f'Hi , click on the link to reset your password https://medionline.azurewebsites.net/change-password/{token}/'
             email_from = settings.EMAIL_HOST_USER
             recipient_list = [user_obj.email]
             send_mail(subject, message, email_from, recipient_list,fail_silently=False)

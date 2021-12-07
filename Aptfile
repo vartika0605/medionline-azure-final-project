@@ -53,18 +53,18 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="active" href="https://medi-online.herokuapp.com/">home</a></li>
+                                        <li><a class="active" href="https://medionline.azurewebsites.net/">home</a></li>
                                         {% if user.is_authenticated %}
                                         <li><a href="#">Donors/Needers <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="https://medi-online.herokuapp.com/findDonors">Plasma Donor List</a></li>
-                                                <li><a href="https://medi-online.herokuapp.com/findNeeders">Plasma Needer List</a></li>
+                                                <li><a href="https://medionline.azurewebsites.net/findDonors">Plasma Donor List</a></li>
+                                                <li><a href="https://medionline.azurewebsites.net/findNeeders">Plasma Needer List</a></li>
                                             </ul>
                                         </li>
                                         {% endif %}
                                         <li><a href="#">Doctors <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="https://medi-online.herokuapp.com/doctor/doctorlist">Our Doctors</a></li>
+                                                <li><a href="https://medionline.azurewebsites.net/doctor/doctorlist">Our Doctors</a></li>
                                                
                                             </ul>
                                         </li>
