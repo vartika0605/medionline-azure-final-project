@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'medionline'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_92952D85C04B43A7A7BC32F009522A04 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7ED5C6AE14A04C8FBBF2D81DEB742D2F }}
