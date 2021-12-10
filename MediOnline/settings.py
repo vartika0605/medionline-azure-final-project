@@ -88,13 +88,20 @@ WSGI_APPLICATION = 'MediOnline.wsgi.application'
 
 
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR , 'db.sqlite3'),
-    }
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'MEDI6',
+        'USER': 'vartika',
+        'PASSWORD': config('password'),
+        'HOST': 'medi6.database.windows.net',
+        'PORT': '',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 13 for SQL Server',
+        },
+    },
 }
-
 
     
 
