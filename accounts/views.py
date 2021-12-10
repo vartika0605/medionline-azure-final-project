@@ -29,6 +29,13 @@ def doctornew(request):
     return render(request , 'doctornew.html')
 def blog(request):
     return render(request , 'blog.html')
+def chatbot(request):
+    return render(request , 'chatbot.html') 
+def dp(request):
+    return render(request , 'dp.html')  
+         
+def end(request):
+    return render(request , 'end.html')
 def singleblog(request):
     return render(request , 'singleblog.html')        
 

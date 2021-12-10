@@ -16,7 +16,9 @@ urlpatterns = [
     path('change-password/<token>/' , ChangePassword , name="change_password"),
     path('doctornew/' ,  doctornew  , name="doctornew"),
     path('blog/' ,  blog  , name="blog"),
-   
+    path('chatbot/' ,  chatbot , name="chatbot"),
+    path('dp/' ,  dp , name="dp"),
+    path('dp/end.html/' ,  end , name="end"),
     path('singleblog/' ,  singleblog  , name="singleblog"),
 
     
