@@ -13,13 +13,14 @@ cffi==1.15.0
 charset-normalizer==2.0.4
 cryptography==36.0.0
 dj-database-url==0.5.0
-Django==3.2.6
+Django==2.1.15
 django-appconf==1.0.4
 django-cors-headers==3.7.0
 django-crispy-forms==1.12.0
 django-filter==2.4.0
 django-heroku==0.3.1
 django-multiselectfield==0.1.12
+django-pyodbc-azure==2.1.0.0
 django-select2==7.7.1
 django-sendgrid-v5==0.9.1
 django-storages==1.11.1
@@ -39,6 +40,7 @@ portalocker==1.7.1
 psycopg2==2.9.1
 pycparser==2.21
 PyJWT==2.3.0
+pyodbc==4.0.32
 PyPDF2==1.26.0
 python-bidi==0.4.2
 python-dateutil==2.8.2
