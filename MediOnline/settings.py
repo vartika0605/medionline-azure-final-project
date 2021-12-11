@@ -95,18 +95,18 @@ DATABASES = {
     }
 }
 '''
-hostname = config('DBHOST')
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': config('DBNAME'),
-        'HOST': hostname + ".postgres.database.azure.com",
-        'USER': config('DBUSER') + "@" + hostname,
-        'PASSWORD': config('DBPASS') 
+        'HOST': config('DBHOST'),
+        'USER': config('DBUSER'),
+        'PASSWORD': config('DBPASS') ,
+        'OPTIONS': { 'sslmode': 'require'},
     }
 }
 
-    
 
 
 # Password validation
