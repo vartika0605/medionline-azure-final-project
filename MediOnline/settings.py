@@ -95,18 +95,15 @@ DATABASES = {
     }
 }
 '''
+hostname = config('DBHOST')
 DATABASES = {
     'default': {
-        'ENGINE': 'sql_server.pyodbc',
-        'NAME': 'MEDI6',
-        'USER': 'vartika',
-        'PASSWORD': config('password'),
-        'HOST': 'medi6.database.windows.net',
-        'PORT': '',
-        'OPTIONS': {
-            'driver': 'ODBC Driver 13 for SQL Server',
-        },
-    },
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config('DBNAME'),
+        'HOST': hostname + ".postgres.database.azure.com",
+        'USER': config('DBUSER') + "@" + hostname,
+        'PASSWORD': config('DBPASS') 
+    }
 }
 
     
